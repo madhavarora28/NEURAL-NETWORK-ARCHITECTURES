@@ -1,0 +1,50 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df=pd.read_csv("C:\\Users\\HP\\Downloads\\Social_Network_Ads.csv")
+df
+
+df.drop(['Gender'], axis=1)
+
+df.head()
+
+df.tail()
+
+df.info()
+
+df.shape
+
+df1=df.drop(['Purchased','Gender'],axis=1)
+df1
+
+df1
+
+df1.Age.max()
+
+df1.Age.min()
+
+# Normalization
+Age=df1['Age']
+min=df1['Age'].min()
+max=df1['Age'].max()
+
+for i in Age:
+    x=i-minimum/maximum-minimum
+    print(x)
+
+sns.distplot(['Age','EstimatedSalary'])
+
+# df1.Age.plot.density(color='green')
+plt.title('Density Plot For Age')
+plt.show()
+
+df1.EstimatedSalary.plot.density(color='green')
+plt.title('Density Plot For EstimatedSalary')
+plt.show()
+
+sns.distplot(df1['Age'])                                                                                           
+
+sns.distplot(df1)
+
